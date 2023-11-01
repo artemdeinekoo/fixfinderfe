@@ -7,9 +7,9 @@ export default function NavBar() {
     //     <button>Ваш профіль</button>
     // </nav>
 
-    <nav className="bg-white border-gray-200">
-      <div className=" w-full flex flex-wrap items-center justify-between mx-auto p-4 shadow-md">
-        <a href="#" className="flex items-center">
+    <nav className="bg-white">
+      <div className=" w-full flex flex-wrap items-center justify-between mx-auto p-4 ">
+        <a href="#" className="flex items-center ml-64">
           <span className=" flex w-40 h-10 flex-col justify-center flex-shrink-0 text-teal-700 text-center text-4xl not-italic font-light uppercase ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +64,8 @@ export default function NavBar() {
           </span>
         </a>
 
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
+        <div className="hidden w-full md:block md:w-auto pr-32">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:bg-white ">
             <li>
               <a
                 href="#"
@@ -79,7 +79,7 @@ export default function NavBar() {
                 href="#"
                 className="text-black text-sm not-italic font-medium leading-5"
               >
-                Блок 1
+                Блок 2
               </a>
             </li>
             <li>
@@ -87,14 +87,17 @@ export default function NavBar() {
                 href="#"
                 className="text-black text-sm not-italic font-medium leading-5 mr-auto*"
               >
-                Блок 1
+                Блок 3
               </a>
             </li>
 
             {/* Побавитись з анімацією треба ще
-        hover:bg-teal-500 hover:text-white hover:border-teal-500 */}
+                padding
+                hover:bg-teal-500 hover:text-white hover:border-teal-500 
+                style={{"borderRadius":"50%"}}
+            */}
 
-            <li className="rounded-lg border-2 border-teal-400 flex flex-row pt-1 pb-1 pl-10 pr-5 items-center text-teal-500 ">
+            <button className="rounded-lg border-2 border-teal-400 flex flex-row pt-1 pb-1 pl-10 pr-5 items-center text-teal-500 ">
               <a
                 href="#"
                 className=" text-center text-sm not-italic font-bold leading-5 mr-3 "
@@ -113,7 +116,7 @@ export default function NavBar() {
                   fill="#2AC0A5"
                 />
               </svg>
-            </li>
+            </button>
           </ul>
         </div>
       </div>

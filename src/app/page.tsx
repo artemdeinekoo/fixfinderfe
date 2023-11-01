@@ -1,12 +1,28 @@
+import Image from "next/image";
+import rabotiaha from "@/assets/images/rabotiaha.jpg";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+    <main className="flex min-h-screen flex-row items-top justify-between pt-3 pl-40 pr-48">
       <div
-        className="text-black rounded-3xl border-2 border-red-500 p-12"
-        flex-shrink-0
+        className="text-black rounded-3xl pt-12 pr-12 pl-12 pb-10 flex-shrink-0"
+        style={{
+          borderRadius: "40px",
+          width: "500px",
+          height: "597px",
+          boxShadow: "0px 20px 50px -15px rgba(29, 117, 101, 0.30)",
+        }}
       >
-        <h1 className="">Місце, де власники та майстри - на одній хвилі</h1>
+        <h1
+          className=" not-italic font-black uppercase text-3xl mb-0"
+          style={{ fontFamily: "Poppins", lineHeight: "138%", width: "405px" }}
+        >
+          Місце, де власники та майстри - на
+          <span style={{ color: "#2ACCAF" }}> одній</span> хвилі
+        </h1>
+
         <svg
+          className="mt-0 mb-10"
           xmlns="http://www.w3.org/2000/svg"
           width="420"
           height="32"
@@ -59,13 +75,55 @@ export default function Home() {
             </filter>
           </defs>
         </svg>
-        <h2>
+
+        <h2
+          className="text-xl not-italic font-semibold uppercase"
+          style={{ fontFamily: "Poppins", lineHeight: "151,5%" }}
+        >
           наш сайт - це платформа для власників нерухомості та майстрів, де
           спільна гармонія та співпраця перетворюють ідеї в реальність.
         </h2>
 
-        <button className="bg-blue-500 rounded-md">Я власник</button>
-        <button className="bg-blue-500 rounded-md">Я майстер</button>
+        <div
+          className="text-center flex-shrink-0 text-base not-italic font-black"
+          style={{
+            color: "#FFF",
+            lineHeight: "151,5%",
+          }}
+        >
+
+          {/* задати href кнопкам */}
+          <button
+            className=" rounded-xl h-12 mb-6 mt-8"
+            style={{
+              width: "389px",
+              background: "#3DDABE",
+            }}
+          >
+            Я власник
+          </button>
+          <button
+            className=" rounded-xl h-12 text-center"
+            style={{
+              width: "170px",
+              background: "rgba(61, 218, 190, 0.50)",
+            }}
+          >
+            Я майстер
+          </button>
+        </div>
+      </div>
+
+          {/* додати хуйню справа зелену */}
+      <div className="flex-shrink-0">
+        <Image
+          src={rabotiaha}
+          alt=""
+          style={{
+            width: "538px",
+            height: "775px",
+          }}
+        ></Image>
       </div>
     </main>
   );

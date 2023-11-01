@@ -1,12 +1,5 @@
 export default function NavBar() {
   return (
-    // <nav classNameName="flex ">
-    //     <h1>fixfinder</h1>
-    //     <button>Увійти</button>
-    //     <button>Зареєструватись</button>
-    //     <button>Ваш профіль</button>
-    // </nav>
-
     <nav className="bg-white">
       <div className=" w-full flex flex-wrap items-center justify-between mx-auto p-4 ">
         <a href="#" className="flex items-center ml-64">

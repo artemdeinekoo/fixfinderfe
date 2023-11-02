@@ -14,7 +14,7 @@ export default function Aboutus() {
     <div className="mt-12">
         <div className="flex text-center justify-center items-center flex-col">
             <h1
-            className="text-4xl not-italic font-black uppercase "
+            className="text-4xl not-italic font-black uppercase"
             style={{
                 color: "#333",
                 fontFamily: "Poppins",
@@ -113,7 +113,7 @@ export default function Aboutus() {
                     </button>
                 </div>
                 <div className="pr-40">
-                    <Image className="pb-12" src={aboutus9} alt="" style={{width:"500px", height:"278"}}></Image>
+                    <Image className="pb-2" src={aboutus9} alt="" style={{width:"500px", height:"278"}}></Image>
                 </div>
             </div>
              

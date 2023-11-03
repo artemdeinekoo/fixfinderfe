@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -25,3 +31,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.container{
+  max-width: 1440px;
+  width: 100%;
+  padding: 14px 150px;
+}
+
+

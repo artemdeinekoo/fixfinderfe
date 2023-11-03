@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function NavBar() {
   return (
-    <nav className="bg-white">
+    <header className="bg-white">
       <div className=" w-full flex flex-wrap items-center justify-between mx-auto p-4 ">
         <a href="#" className="flex items-center ml-64">
           <span className=" flex w-40 h-10 flex-col justify-center flex-shrink-0 text-teal-700 text-center text-4xl not-italic font-light uppercase ">
@@ -90,13 +92,12 @@ export default function NavBar() {
                 style={{"borderRadius":"50%"}}
             */}
 
-            <button className="rounded-lg border-2 border-teal-400 flex flex-row pt-1 pb-1 pl-10 pr-5 items-center text-teal-500 ">
-              <a
-                href="#"
-                className=" text-center text-sm not-italic font-bold leading-5 mr-3 "
-              >
+            <Link href="#" className="gap-3 text-center text-sm not-italic font-bold leading-5 rounded-lg border-2 border-teal-400 flex flex-row pt-1 pb-1 pl-10 pr-5 items-center text-teal-500 ">
+              
+                
+              
                 Увійти
-              </a>
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="37"
@@ -109,10 +110,10 @@ export default function NavBar() {
                   fill="#2AC0A5"
                 />
               </svg>
-            </button>
+            </Link>
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

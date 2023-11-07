@@ -1,16 +1,12 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import NavBar from "./nav";
-import Aboutus from "./aboutus";
-import Services from "./services";
-import Footer from "./footer";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
-  title: "Fixfinder",
-  description: "A place to find your rabotiaha",
+  title: "FixFinder",
+  description: "Місце, де власники та майстри - на одній хвилі",
 };
 
 export default function RootLayout({
@@ -20,15 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {<NavBar />}
-        <div className="conatiner">
-          {children}
-          {<Aboutus />}
-          {<Services />}
-
-          {<Footer />}
-        </div>
+      <body>
+        <Header />
+        <div className="wrapper">{children}</div>
+        <Footer />
       </body>
     </html>
   );

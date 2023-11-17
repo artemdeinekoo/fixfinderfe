@@ -1,0 +1,110 @@
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 0 50px;
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 1141px;
+    height: 466px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: var(--Gray-6, #f2f2f2);
+    .left {
+      margin-right: 59px;
+      img {
+        width: 420px;
+        height: 466px;
+        flex-shrink: 0;
+        border-radius: 30px 0px 0px 30px;
+      }
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      padding-top: 37px;
+      h1 {
+        color: #333;
+        text-align: start;
+        font-family: Poppins;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 138%; /* 49.68px */
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      p {
+        width: 70px;
+        height: 4px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #3ddabe;
+        margin-bottom: 26px;
+      }
+      input {
+        width: 320px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #fff;
+        border: none;
+        margin-bottom: 10px;
+
+        color: #828282;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 138.5%; /* 19.39px */
+        padding: 15px 0 14px 18px;
+      }
+      .submit {
+        margin-top: 16px;
+        width: 127px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: #3ddabe;
+        padding: 0;
+
+        text-align: center;
+        color: #fff;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 138.5%; /* 19.39px */
+        text-transform: uppercase;
+      }
+    }
+    .right {
+      margin: 131px 0 0 20px;
+      img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        margin-right: 20px;
+        
+      }
+      p {
+        color: #4f4f4f;
+        font-family: TT Hoves;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 37px;
+      }
+    }
+    .divider {
+      width: 4px;
+      height: 296px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: #e0e0e0;
+      margin-top: 127px;
+    }
+  }
+}

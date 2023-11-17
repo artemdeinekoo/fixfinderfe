@@ -1,0 +1,91 @@
+.all {
+  background-image: url(../../assets/icons/reviewsbg.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  .start {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 90px;
+    h1 {
+      color: var(--Gray-1, #333);
+      font-family: Poppins;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 138%; /* 49.68px */
+      text-transform: uppercase;
+      margin-top: 50px;
+    }
+    p {
+      width: 70px;
+      height: 4px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: #3ddabe;
+    }
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+      width: 367px;
+      height: 246px;
+      flex-shrink: 0;
+      border-radius: 30px;
+      background: #fff;
+      box-shadow: 0px 20px 50px -15px rgba(29, 117, 101, 0.2);
+      padding: 30px;
+
+      h2 {
+        width: 219px;
+        color: var(--Gray-1, #333);
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 138%; /* 24.84px */
+        margin-bottom: 12px;
+      }
+      p {
+        width: 307px;
+        color: var(--Gray-3, #828282);
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 138.5%; /* 16.62px */
+        margin-bottom: 12px;
+      }
+    }
+  }
+  .end{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  
+  button {
+    width: 168px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 92px;
+    border: 2px solid #3ddabe;
+    background: #fff;
+    color: #3ddabe;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 151.5%; /* 24.24px */
+    text-transform: uppercase;
+  }
+}
+}

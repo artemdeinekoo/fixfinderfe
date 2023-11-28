@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./AboutUs.module.scss";
 import photo from "@/assets/images/aboutus.jpg";
-import bg from "@/assets/icons/aboutusbg2.svg";
+import bg from "@/assets/images/bubble.jpg";
 
 const AboutUs = () => {
   return (
@@ -17,6 +18,7 @@ const AboutUs = () => {
         <p></p>
       </div>
       <div className={styles.main}>
+       
         <div className={styles.left}>
           <p>
             Наш проект - це інноваційний веб-сайт, де ви, як клієнт, зможете
@@ -27,7 +29,7 @@ const AboutUs = () => {
             допомогти вам знайти найкращі рішення для вашого будинку.
           </p>
 
-          <button>Дізнатись більше</button>
+          <Link href={""} >Дізнатись більше</Link>
         </div>
         <div>
           <Image src={photo} alt=""></Image>

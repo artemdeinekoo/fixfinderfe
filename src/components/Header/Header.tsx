@@ -28,9 +28,9 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <button>
+          <Link href={""} className={styles.login}>
             ВХІД <Image src={arrow} alt="->" />
-          </button>
+          </Link>
         </div>
       </div>
     </header>

@@ -71,9 +71,7 @@
     justify-content: center;
     margin-top: 50px;
   
-  button {
-    width: 168px;
-    height: 60px;
+  a {
     flex-shrink: 0;
     border-radius: 92px;
     border: 2px solid #3ddabe;
@@ -86,6 +84,12 @@
     font-weight: 900;
     line-height: 151.5%; /* 24.24px */
     text-transform: uppercase;
+    padding:10px 37px;
+    transition:all .3s;
+    &:hover {
+      background: #3DDABE;
+      color: #FFF;
+    }
   }
 }
 }

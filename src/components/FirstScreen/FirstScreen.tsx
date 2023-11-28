@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import divider from "@/assets/images/divider.png";
 import rabotiaga from "@/assets/images/firstscreengb.jpg";
@@ -20,8 +21,9 @@ const FirstScreen = () => {
         </p>
 
         <div className={styles.buttons}>
-          <button className={styles.active}>Я власник</button>
-          <button>Я майстер</button>
+          <Link href={"#"} className={styles.active}>Я власник</Link>
+          
+          <Link href={"#"}>Я майстер</Link>
         </div>
       </div>
 

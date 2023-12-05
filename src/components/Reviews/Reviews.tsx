@@ -1,6 +1,7 @@
 import React from "react";
-
 import Image from "next/image";
+import Link from "next/link";
+
 
 import styles from "./Reviews.module.scss";
 
@@ -10,7 +11,7 @@ export default function Reviews() {
   return (
     <div className={styles.all}>
       <div className={styles.start}>
-        <h1>Services</h1>
+        <h1>Reviews</h1>
         <p></p>
       </div>
 
@@ -52,7 +53,7 @@ export default function Reviews() {
         </div>
       </div>
       <div className={styles.end}>
-        <button>I need help</button>
+        <Link href={"#"}>I need help</Link>
       </div>
     </div>
   );

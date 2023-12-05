@@ -1,0 +1,184 @@
+.section {
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    width: 1154px;
+    height: 758px;
+    flex-shrink: 0;
+    border-radius: 26px;
+    background: #51c8bc;
+    box-shadow: 0px 0px 10px 9px rgba(186, 186, 186, 0.25);
+    position: absolute;
+    justify-content: center;
+
+    .left {
+      display: block;
+      text-align: center;
+      padding: 10px 54px 0 73px;
+
+      h2 {
+        text-align: start;
+        margin-top: 210px;
+        color: #fff;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 151.5%; /* 48.48px */
+      }
+    }
+    .right {
+      width: 729px;
+      height: 758px;
+      flex-shrink: 0;
+      border-radius: 26px;
+      background: #fff;
+      box-shadow: 0px 0px 10px 9px rgba(186, 186, 186, 0.25);
+      padding: 20px 23px 38px 20px;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          text-align: center;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: rgb(190, 189, 189);
+          }
+        }
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        padding-left: 116px;
+        padding-right: 100px;
+        justify-content: center;
+        padding-top: 80px;
+
+        h1 {
+          color: #000;
+          font-size: 34px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 35px; /* 102.941% */
+          letter-spacing: 2.72px;
+          margin-bottom: 5px;
+
+          span {
+            color: #2ac0a5;
+          }
+        }
+
+        .underline {
+          width: 132px;
+          height: 5px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          background: #2ac0a5;
+          margin-bottom: 25px;
+        }
+        .inputText {
+          border: none;
+          border-bottom: 1px solid #f3f3f3;
+          color: #bebcbc;
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 35px; /* 250% */
+          letter-spacing: 1.12px;
+          outline: none;
+          margin-bottom: 23px;
+          transition: all 0.3s;
+          &:focus {
+            border-bottom: 1px solid black;
+          }
+        }
+        .terms {
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          margin-bottom: 21px;
+          color: #bebcbc;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          letter-spacing: 1.12px;
+
+          input {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+          }
+        }
+        .submit {
+          text-align: center;
+          width: 513px;
+          height: 57px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          background: #2ac0a5;
+          color: #fff;
+          font-family: Poppins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 35px; /* 218.75% */
+          letter-spacing: 1.28px;
+          border: 2px solid #2ac0a5;
+          transition: all 0.3s;
+
+          &:hover {
+            background: #fff;
+            color: #3ddabe;
+          }
+        }
+        .end{
+          width: 513px;
+          text-align: center;
+          .gugel {
+            display: flex;
+            margin-top: 46px;
+            margin-bottom: 46px;
+  
+            img {
+              width: 24px;
+              height: 24px;
+              flex-shrink: 0;
+              margin-right: 12px;
+            }
+            #google{
+              width: 23px;
+height: 27px;
+flex-shrink: 0;
+            }
+            p {
+              margin-left: 42px;
+              margin-right: 50px;
+            }
+          }
+          .other {
+            color: #bebcbc;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 35px; /* 218.75% */
+            letter-spacing: 1.28px;
+  
+            a {
+              color: #2ac0a5;
+            }
+          }
+        }
+       
+      }
+    }
+  }
+}

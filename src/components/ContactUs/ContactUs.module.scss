@@ -59,6 +59,7 @@
         font-weight: 400;
         line-height: 138.5%; /* 19.39px */
         padding: 15px 0 14px 18px;
+        outline: none;
       }
       .submit {
         margin-top: 16px;
@@ -77,6 +78,13 @@
         font-weight: 600;
         line-height: 138.5%; /* 19.39px */
         text-transform: uppercase;
+        border:2px solid #3ddabe;
+        transition: all .3s;
+        &:hover{
+          background: #fff;
+          color: #3ddabe;
+        }
+        
       }
     }
     .right {

@@ -28,7 +28,7 @@ export default function Services() {
   return (
     <div>
       <div className={styles.start}>
-        <h1>Services</h1>
+        <h1>Послуги</h1>
         <p></p>
       </div>
       
@@ -186,9 +186,9 @@ export default function Services() {
         </div>
 
         
-          <button className={styles.help}>
+          <Link href={"#"} className={styles.help}>
             I need help
-          </button>
+          </Link>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@
       }
     }
 
-    button {
+    .login {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -42,6 +42,12 @@
       font-size: 14px;
       font-weight: 700;
       line-height: 20px; /* 142.857% */
+      transition: all .3s;
+
+      &:hover {
+        background: #3DDABE;
+        color: #FFF;
+      }
     }
   }
 }

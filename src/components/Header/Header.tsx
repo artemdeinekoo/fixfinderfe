@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, {useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,8 +8,11 @@ import styles from "./Header.module.scss";
 
 import logo from "@/assets/icons/logo.svg";
 import arrow from "@/assets/icons/arrow.svg";
+import Auth from "../Auth/Auth";
 
 const Header = () => {
+  const [openModal, setOpenModal]= useState(false);
+
   return (
     <header>
       <div className={styles.wrapper}>
@@ -28,11 +33,13 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <Link href={""} className={styles.login}>
+          <Link href={""} className={styles.login} onClick={()=>setOpenModal(true)}>
             ВХІД <Image src={arrow} alt="->" />
           </Link>
+          {/* <Auth/> */}
         </div>
       </div>
+      {openModal ? (<Auth/>) : null}
     </header>
   );
 };

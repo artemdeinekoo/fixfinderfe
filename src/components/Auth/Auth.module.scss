@@ -41,7 +41,31 @@
         display: flex;
         justify-content: space-between;
 
-        a {
+        .dropdown{
+          position: relative;
+          display: inline-block;
+          &:hover .ddoptions{
+            display:block;
+          }
+          button{
+            border-radius: 5px;
+            padding:5px 8px;
+            transition: all .3s;
+            
+            &:hover{
+            background-color: rgb(214, 212, 212);
+              
+            }
+          }
+          .ddoptions{
+            display: none;
+            position: absolute;
+            z-index: 1;
+            list-style-type: none;
+          }
+        }
+
+        .close {
           height: 30px;
           width: 30px;
           border-radius: 50%;
@@ -139,24 +163,24 @@
             color: #3ddabe;
           }
         }
-        .end{
+        .end {
           width: 513px;
           text-align: center;
           .gugel {
             display: flex;
             margin-top: 46px;
             margin-bottom: 46px;
-  
+
             img {
               width: 24px;
               height: 24px;
               flex-shrink: 0;
               margin-right: 12px;
             }
-            #google{
+            #google {
               width: 23px;
-height: 27px;
-flex-shrink: 0;
+              height: 27px;
+              flex-shrink: 0;
             }
             p {
               margin-left: 42px;
@@ -171,13 +195,12 @@ flex-shrink: 0;
             font-weight: 500;
             line-height: 35px; /* 218.75% */
             letter-spacing: 1.28px;
-  
+
             a {
               color: #2ac0a5;
             }
           }
         }
-       
       }
     }
   }

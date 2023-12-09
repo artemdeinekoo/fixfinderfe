@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,10 +8,13 @@ import styles from "./Header.module.scss";
 
 import logo from "@/assets/icons/logo.svg";
 import arrow from "@/assets/icons/arrow.svg";
-import Auth from "../Auth/Auth";
+import CreateAcc from "../CreateAcc/CreateAcc";
 
 const Header = () => {
-  const [openModal, setOpenModal]= useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const handleModalClose = () => {
+    setOpenModal(false);
+  };
 
   return (
     <header>
@@ -33,13 +36,19 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <Link href={""} className={styles.login} onClick={()=>setOpenModal(true)}>
+          <Link
+            href={""}
+            className={styles.login}
+            onClick={() => setOpenModal(true)}
+          >
             ВХІД <Image src={arrow} alt="->" />
           </Link>
           {/* <Auth/> */}
         </div>
       </div>
-      {openModal ? (<Auth/>) : null}
+      {openModal ? (
+        <CreateAcc close={handleModalClose}/>
+      ) : null}
     </header>
   );
 };

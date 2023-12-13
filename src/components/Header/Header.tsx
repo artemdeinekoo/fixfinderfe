@@ -46,9 +46,7 @@ const Header = () => {
           {/* <Auth/> */}
         </div>
       </div>
-      {openModal ? (
-        <CreateAcc close={handleModalClose}/>
-      ) : null}
+      {openModal ? <CreateAcc close={handleModalClose} /> : null}
     </header>
   );
 };

@@ -7,8 +7,7 @@ import styles from "./Auth.module.scss";
 
 import logo from "@/assets/icons/authlogo.svg";
 import arrow from "@/assets/icons/ddarrow.svg";
-import google from "@/assets/images/googlelogo.jpg";
-import facebook from "@/assets/images/facebooklogo.jpg";
+
 
 interface AuthProps {
   close: () => void;
@@ -46,8 +45,8 @@ const Auth = ({ close,children }: AuthProps) => {
             <Link className={styles.close} href={""} onClick={close}>
               X
             </Link>
-            {children}
           </div>
+          {children}
         </div>
       </div>
     </section>

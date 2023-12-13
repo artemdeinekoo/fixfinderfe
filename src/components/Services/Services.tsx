@@ -179,16 +179,17 @@ export default function Services() {
             industry
           </p>
         </div>
-        <div className={styles.dot}>
+        {/* <div className={styles.dot}>
           <Image src={dot} alt=""></Image>
           <Image src={s16} alt=""></Image>
           <h1>Install and Upgrade Existing Decors</h1>
-        </div>
+        </div> */}
 
-          <Link href={"#"} className={styles.help}>
+          
+      </div>
+      <Link href={"#"} className={styles.help}>
             I need help
           </Link>
-      </div>
     </div>
   );
 }

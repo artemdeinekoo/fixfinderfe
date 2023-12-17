@@ -1,6 +1,10 @@
 .section {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+// position: -webkit-sticky;
+// position: sticky;
+// top: 0;
+  
 
   .wrapper {
     display: flex;
@@ -41,7 +45,30 @@
         display: flex;
         justify-content: space-between;
 
-        a {
+        .dropdown {
+          position: relative;
+          display: inline-block;
+          &:hover .ddoptions {
+            display: block;
+          }
+          button {
+            border-radius: 5px;
+            padding: 5px 8px;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: rgb(214, 212, 212);
+            }
+          }
+          .ddoptions {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            list-style-type: none;
+          }
+        }
+
+        .close {
           height: 30px;
           width: 30px;
           border-radius: 50%;
@@ -52,132 +79,6 @@
             background-color: rgb(190, 189, 189);
           }
         }
-      }
-      .main {
-        display: flex;
-        flex-direction: column;
-        padding-left: 116px;
-        padding-right: 100px;
-        justify-content: center;
-        padding-top: 80px;
-
-        h1 {
-          color: #000;
-          font-size: 34px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 35px; /* 102.941% */
-          letter-spacing: 2.72px;
-          margin-bottom: 5px;
-
-          span {
-            color: #2ac0a5;
-          }
-        }
-
-        .underline {
-          width: 132px;
-          height: 5px;
-          flex-shrink: 0;
-          border-radius: 10px;
-          background: #2ac0a5;
-          margin-bottom: 25px;
-        }
-        .inputText {
-          border: none;
-          border-bottom: 1px solid #f3f3f3;
-          color: #bebcbc;
-          font-family: Poppins;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 35px; /* 250% */
-          letter-spacing: 1.12px;
-          outline: none;
-          margin-bottom: 23px;
-          transition: all 0.3s;
-          &:focus {
-            border-bottom: 1px solid black;
-          }
-        }
-        .terms {
-          display: flex;
-          gap: 24px;
-          align-items: center;
-          margin-bottom: 21px;
-          color: #bebcbc;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          letter-spacing: 1.12px;
-
-          input {
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-          }
-        }
-        .submit {
-          text-align: center;
-          width: 513px;
-          height: 57px;
-          flex-shrink: 0;
-          border-radius: 10px;
-          background: #2ac0a5;
-          color: #fff;
-          font-family: Poppins;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 800;
-          line-height: 35px; /* 218.75% */
-          letter-spacing: 1.28px;
-          border: 2px solid #2ac0a5;
-          transition: all 0.3s;
-
-          &:hover {
-            background: #fff;
-            color: #3ddabe;
-          }
-        }
-        .end{
-          width: 513px;
-          text-align: center;
-          .gugel {
-            display: flex;
-            margin-top: 46px;
-            margin-bottom: 46px;
-  
-            img {
-              width: 24px;
-              height: 24px;
-              flex-shrink: 0;
-              margin-right: 12px;
-            }
-            #google{
-              width: 23px;
-height: 27px;
-flex-shrink: 0;
-            }
-            p {
-              margin-left: 42px;
-              margin-right: 50px;
-            }
-          }
-          .other {
-            color: #bebcbc;
-            font-family: Poppins;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 35px; /* 218.75% */
-            letter-spacing: 1.28px;
-  
-            a {
-              color: #2ac0a5;
-            }
-          }
-        }
-       
       }
     }
   }

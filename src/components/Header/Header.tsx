@@ -43,7 +43,7 @@ const Header = () => {
           >
             ВХІД <Image src={arrow} alt="->" />
           </Link>
-          {/* <Auth/> */}
+          
         </div>
       </div>
       {openModal ? <CreateAcc close={handleModalClose} /> : null}

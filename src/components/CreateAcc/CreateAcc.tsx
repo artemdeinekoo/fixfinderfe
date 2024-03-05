@@ -60,7 +60,7 @@ const CreateAcc = ({ close }: CreateAccProps) => {
           <div className={styles.terms}>
             <input type="checkbox" id="terms" />
             <label htmlFor="terms">
-              I have read and agreed to the Terms of Service and PrivacyPolicy
+              I have read and agreed to the Terms of Service and Privacy Policy
             </label>
           </div>
         ) : (
@@ -69,7 +69,11 @@ const CreateAcc = ({ close }: CreateAccProps) => {
           </p>
         )}
 
-        <input className={styles.submit} type="submit" value="Continue" />
+         {action === "SignUp" ? (
+        <input className={styles.submit} type="submit" value="Sign Up"/>
+        ) : (
+        <input className={styles.submit} type="submit" value="Sign In"/>
+        )} 
 
         <div className={styles.end}>
           <div className={styles.gugel}>
@@ -93,7 +97,7 @@ const CreateAcc = ({ close }: CreateAccProps) => {
               </Link>
             </p>
           ) : (
-            <p className={styles.other}>
+            <p className={styles.otherSU}>
               Do not have an account yet?
               <Link
                 href={""}

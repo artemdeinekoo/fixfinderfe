@@ -31,7 +31,8 @@
   margin-bottom: 46px;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 180px 0 180px;
+  padding: 0 180px;
+
 
   .dot {
     display: flex;
@@ -43,7 +44,7 @@
     img {
       position: absolute;
     }
-    h1 {
+    h2 {
       position: absolute;
       top: 50px;
       color: var(--Gray-1, #333);

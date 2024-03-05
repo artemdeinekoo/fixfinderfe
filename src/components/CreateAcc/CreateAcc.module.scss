@@ -1,145 +1,156 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 70px;
+  padding-left: 70px;
+  justify-content: center;
+  padding-top: 30px;
+
+  h1 {
+    color: #000;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; /* 102.941% */
+    letter-spacing: 2.72px;
+    margin-bottom: 5px;
+
+    span {
+      color: #2ac0a5;
+    }
+  }
+
+  .underline {
+    width: 132px;
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #2ac0a5;
+    margin-bottom: 25px;
+  }
+  .inputText {
+    border: none;
+    border-bottom: 1px solid #f3f3f3;
+    
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px; /* 250% */
+    letter-spacing: 1.12px;
+    outline: none;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+    &:focus {
+      border-bottom: 1px solid black;
+    }
+  }
+  .forgorPassword {
+    color: #bebcbc;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px; /* 218.75% */
+    letter-spacing: 1.28px;
+    margin-bottom: 20px;
+
+    a {
+      color: #2ac0a5;
+    }
+  }
+  .terms {
     display: flex;
-    flex-direction: column;
-    padding-left: 116px;
-    padding-right: 100px;
-    justify-content: center;
-    padding-top: 80px;
-    padding-right: 100px;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 21px;
+    color: #bebcbc;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1.12px;
 
-    h1 {
-      color: #000;
-      font-size: 34px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 35px; /* 102.941% */
-      letter-spacing: 2.72px;
-      margin-bottom: 5px;
-
-      span {
-        color: #2ac0a5;
-      }
-    }
-
-    .underline {
-      width: 132px;
-      height: 5px;
+    input {
+      width: 15px;
+      height: 15px;
       flex-shrink: 0;
-      border-radius: 10px;
-      background: #2ac0a5;
-      margin-bottom: 25px;
     }
-    .inputText {
-      border: none;
-      border-bottom: 1px solid #f3f3f3;
-      color: #bebcbc;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 35px; /* 250% */
-      letter-spacing: 1.12px;
-      outline: none;
-      margin-bottom: 23px;
-      transition: all 0.3s;
-      &:focus {
-        border-bottom: 1px solid black;
+  }
+  .submit {
+    text-align: center;
+    width: 480px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #2ac0a5;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 35px; /* 218.75% */
+    letter-spacing: 1.28px;
+    border: 2px solid #2ac0a5;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background: #fff;
+      color: #3ddabe;
+    }
+  }
+  .end {
+    width: 513px;
+    text-align: center;
+  
+
+    .gugel {
+      display: flex;
+      margin-top: 46px;
+
+      img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        margin-right: 12px;
+      }
+      #google {
+        width: 23px;
+        height: 27px;
+        flex-shrink: 0;
+      }
+      p {
+        margin-left: 42px;
+        margin-right: 50px;
       }
     }
-    .forgorPassword {
+    .other {
       color: #bebcbc;
       font-family: Poppins;
-      font-size: 16px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 500;
       line-height: 35px; /* 218.75% */
       letter-spacing: 1.28px;
-      margin-bottom: 10px;
+      margin-top: 30px;
 
       a {
         color: #2ac0a5;
       }
     }
-    .terms {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      margin-bottom: 21px;
+    .otherSU {
       color: #bebcbc;
-      font-size: 14px;
+      font-family: Poppins;
+      font-size: 15px;
       font-style: normal;
       font-weight: 500;
-      letter-spacing: 1.12px;
-
-      input {
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-      }
-    }
-    .submit {
-      text-align: center;
-      width: 513px;
-      height: 57px;
-      flex-shrink: 0;
-      border-radius: 10px;
-      background: #2ac0a5;
-      color: #fff;
-      font-family: Poppins;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 800;
       line-height: 35px; /* 218.75% */
       letter-spacing: 1.28px;
-      border: 2px solid #2ac0a5;
-      transition: all 0.3s;
-      cursor: pointer;
+      margin-top: 60px;
 
-      &:hover {
-        background: #fff;
-        color: #3ddabe;
+      a {
+        color: #2ac0a5;
       }
     }
-    .end {
-      display:flex;
-      width: 513px;
-      text-align: center;
-      flex-direction: column;
-      
-
-      .gugel {
-        display: flex;
-        margin-top: 46px;
-        margin-bottom: 46px;
-
-        img {
-          width: 24px;
-          height: 24px;
-          flex-shrink: 0;
-          margin-right: 12px;
-        }
-        #google {
-          width: 23px;
-          height: 27px;
-          flex-shrink: 0;
-        }
-        p {
-          margin-left: 42px;
-          margin-right: 50px;
-        }
-      }
-      .other {
-        color: #bebcbc;
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 35px; /* 218.75% */
-        letter-spacing: 1.28px;
-        
-        a {
-          color: #2ac0a5;
-        }
-    }
+  }
 }
-    }

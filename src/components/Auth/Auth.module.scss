@@ -1,82 +1,91 @@
-.section {
-display: flex;
-justify-content: center;
-// position: -webkit-sticky;
-// position: sticky;
-// top: 0;
-  
-
-  .wrapper {
+.blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  .section {
+    position: fixed;
     display: flex;
-    width: 1154px;
-    height: 758px;
-    flex-shrink: 0;
-    border-radius: 26px;
-    background: #51c8bc;
-    box-shadow: 0px 0px 10px 9px rgba(186, 186, 186, 0.25);
-    position: absolute;
     justify-content: center;
-
-    .left {
-      display: block;
-      text-align: center;
-      padding: 10px 54px 0 73px;
-
-      h2 {
-        text-align: start;
-        margin-top: 210px;
-        color: #fff;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 151.5%; /* 48.48px */
-      }
-    }
-    .right {
-      width: 729px;
-      height: 758px;
+    right: 50%;
+    .wrapper {
+      display: flex;
+      width: 1060px;
+      height: 650px;
       flex-shrink: 0;
       border-radius: 26px;
-      background: #fff;
+      background: #51c8bc;
       box-shadow: 0px 0px 10px 9px rgba(186, 186, 186, 0.25);
-      padding: 20px 23px 38px 20px;
+      position: absolute;
+      justify-content: center;
 
-      .top {
-        display: flex;
-        justify-content: space-between;
+      .left {
+        display: block;
+        text-align: center;
+        padding: 10px 54px 0 73px;
 
-        .dropdown {
-          position: relative;
-          display: inline-block;
-          &:hover .ddoptions {
-            display: block;
+        h2 {
+          text-align: start;
+          margin-top: 150px;
+          color: #fff;
+          font-size: 29px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 151.5%; /* 48.48px */
+        }
+      }
+      .right {
+        width: 670px;
+        height: 650px;
+        flex-shrink: 0;
+        border-radius: 26px;
+        background: #fff;
+        box-shadow: 0px 0px 10px 9px rgba(186, 186, 186, 0.25);
+        padding: 20px 23px 38px 20px;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            &:hover .ddoptions {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding-left: 6px;
+
+            }
+            button {
+              border-radius: 5px;
+              padding: 5px 8px;
+              transition: all 0.3s;
+
+              &:hover {
+                background-color: rgb(214, 212, 212);
+              }
+            }
+            .ddoptions {
+              display: none;
+              position: absolute;
+              z-index: 1;
+              list-style-type: none;
+            }
           }
-          button {
-            border-radius: 5px;
-            padding: 5px 8px;
+
+          .close {
+            padding-top: 2.2px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            text-align: center;
             transition: all 0.3s;
 
             &:hover {
-              background-color: rgb(214, 212, 212);
+              background-color: rgb(190, 189, 189);
             }
-          }
-          .ddoptions {
-            display: none;
-            position: absolute;
-            z-index: 1;
-            list-style-type: none;
-          }
-        }
-
-        .close {
-          height: 30px;
-          width: 30px;
-          border-radius: 50%;
-          text-align: center;
-          transition: all 0.3s;
-
-          &:hover {
-            background-color: rgb(190, 189, 189);
           }
         }
       }

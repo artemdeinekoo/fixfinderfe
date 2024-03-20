@@ -17,74 +17,48 @@ const CreateAcc = ({ close }: CreateAccProps) => {
 
   return (
     <Auth close={close}>
-      <div className={styles.main}>
-        {action === "SignUp" ? (
+      {action === "SignUp" ? (
+        <div className={styles.main}>
           <h1>
             <span>Create</span> account
           </h1>
-        ) : (
-          <h1>
-            <span>Log </span>In
-          </h1>
-        )}
-        <p className={styles.underline}></p>
-
-        {action === "SignUp" ? (
+          <p className={styles.underline}></p>
           <input
             className={styles.inputText}
             type="text"
             placeholder="Full Name"
           />
-        ) : (
-          <div></div>
-        )}
-
-        <input className={styles.inputText} type="email" placeholder="Email" />
-        <input
-          className={styles.inputText}
-          type="password"
-          placeholder="Password"
-        />
-
-        {action === "SignUp" ? (
+          <input
+            className={styles.inputText}
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            className={styles.inputText}
+            type="password"
+            placeholder="Password"
+          />
           <input
             className={styles.inputText}
             type="password"
             placeholder="Confirm password"
           />
-        ) : (
-          <div></div>
-        )}
-
-        {action === "SignUp" ? (
           <div className={styles.terms}>
             <input type="checkbox" id="terms" />
             <label htmlFor="terms">
-              I have read and agreed to the Terms of Service and Privacy Policy
+              I have read and agreed to the Terms of Service and PrivacyPolicy
             </label>
           </div>
-        ) : (
-          <p className={styles.forgorPassword}>
-            Forgot password? <Link href={""}>Click here</Link>
-          </p>
-        )}
+          <input className={styles.submit} type="submit" value="Continue" />
 
-         {action === "SignUp" ? (
-        <input className={styles.submit} type="submit" value="Sign Up"/>
-        ) : (
-        <input className={styles.submit} type="submit" value="Sign In"/>
-        )} 
-
-        <div className={styles.end}>
-          <div className={styles.gugel}>
-            <Image src={google} alt="google logo" id={styles.google}></Image>
-            <Link href={""}>Signup with Google</Link>
-            <p>or</p>
-            <Image src={facebook} alt="facebook logo"></Image>
-            <Link href={""}>Signup with Facebook</Link>
-          </div>
-
-          {action === "SignUp" ? (
+          <div className={styles.end}>
+            <div className={styles.gugel}>
+              <Image src={google} alt="google logo" id={styles.google}></Image>
+              <Link href={""}>Signup with Google</Link>
+              <p>or</p>
+              <Image src={facebook} alt="facebook logo"></Image>
+              <Link href={""}>Signup with Facebook</Link>
+            </div>
             <p className={styles.other}>
               Already have an account?
               <Link
@@ -96,8 +70,37 @@ const CreateAcc = ({ close }: CreateAccProps) => {
                 Log in
               </Link>
             </p>
-          ) : (
-            <p className={styles.otherSU}>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.main}>
+          <h1>
+            <span>Log </span>In
+          </h1>
+          <p className={styles.underline}></p>
+          <input
+            className={styles.inputText}
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            className={styles.inputText}
+            type="password"
+            placeholder="Password"
+          />
+          <p className={styles.forgorPassword}>
+            Forgot password? <Link href={""}>Click here</Link>
+          </p>
+          <input className={styles.submit} type="submit" value="Continue" />
+          <div className={styles.end}>
+            <div className={styles.gugel}>
+              <Image src={google} alt="google logo" id={styles.google}></Image>
+              <Link href={""}>Signup with Google</Link>
+              <p>or</p>
+              <Image src={facebook} alt="facebook logo"></Image>
+              <Link href={""}>Signup with Facebook</Link>
+            </div>
+            <p className={styles.other}>
               Do not have an account yet?
               <Link
                 href={""}
@@ -108,9 +111,9 @@ const CreateAcc = ({ close }: CreateAccProps) => {
                 Sign up
               </Link>
             </p>
-          )}
+          </div>
         </div>
-      </div>
+      )}
     </Auth>
   );
 };

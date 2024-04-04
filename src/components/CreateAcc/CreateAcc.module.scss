@@ -28,6 +28,15 @@
     background: #2ac0a5;
     margin-bottom: 25px;
   }
+  .submitForm{
+    display: flex;
+    flex-direction: column;
+    .error{
+      padding: 3px;
+      background-color: rgba(253, 98, 98, 0.459);
+      border-radius: 10px;
+    }
+  }
   .inputText {
     border: none;
     border-bottom: 1px solid #f3f3f3;

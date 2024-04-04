@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./CreateAcc.module.scss";
 import Auth from "../Auth/Auth";
+import { User, UserSchema } from "./UserSchema";
 
 import google from "@/assets/images/googlelogo.jpg";
 import facebook from "@/assets/images/facebooklogo.jpg";
@@ -15,6 +18,20 @@ interface CreateAccProps {
 const CreateAcc = ({ close }: CreateAccProps) => {
   const [action, setAction] = useState("SignUp");
 
+  const {
+    register,
+    handleSubmit,
+    trigger,
+    formState: { errors }
+  } = useForm<User>({
+    resolver: zodResolver(UserSchema)
+  })
+
+const onSubmit: SubmitHandler<User>=(data) =>{
+  console.log(data.name)
+  console.log(data)
+}
+
   return (
     <Auth close={close}>
       {action === "SignUp" ? (
@@ -23,15 +40,20 @@ const CreateAcc = ({ close }: CreateAccProps) => {
             <span>Create</span> account
           </h1>
           <p className={styles.underline}></p>
+          <form className={styles.submitForm} onSubmit={handleSubmit(onSubmit)}>
           <input
             className={styles.inputText}
             type="text"
             placeholder="Full Name"
+            {...register("name")}
           />
+          {errors.name &&
+               <p className={styles.error}>{errors.name?.message}</p> }
           <input
             className={styles.inputText}
             type="email"
             placeholder="Email"
+            {...register("email")}
           />
           <input
             className={styles.inputText}
@@ -49,7 +71,8 @@ const CreateAcc = ({ close }: CreateAccProps) => {
               I have read and agreed to the Terms of Service and PrivacyPolicy
             </label>
           </div>
-          <input className={styles.submit} type="submit" value="Continue" />
+          <button className={styles.submit} type="submit">Continue</button>
+          </form>
 
           <div className={styles.end}>
             <div className={styles.gugel}>
@@ -72,12 +95,15 @@ const CreateAcc = ({ close }: CreateAccProps) => {
             </p>
           </div>
         </div>
+
       ) : (
+        
         <div className={styles.main}>
           <h1>
             <span>Log </span>In
           </h1>
           <p className={styles.underline}></p>
+          <form className={styles.submitForm} onSubmit={handleSubmit(onSubmit)}>
           <input
             className={styles.inputText}
             type="email"
@@ -88,10 +114,11 @@ const CreateAcc = ({ close }: CreateAccProps) => {
             type="password"
             placeholder="Password"
           />
+          <input className={styles.submit} type="submit" value="Continue" />
+          </form>
           <p className={styles.forgorPassword}>
             Forgot password? <Link href={""}>Click here</Link>
           </p>
-          <input className={styles.submit} type="submit" value="Continue" />
           <div className={styles.end}>
             <div className={styles.gugel}>
               <Image src={google} alt="google logo" id={styles.google}></Image>
